@@ -1,0 +1,14 @@
+/*--------------------- REACT ---------------------*/
+
+//Crear nuevo proyecto de React con Vite
+npm create vite@latest
+/-> colocar el nombre
+/-> elegir el tipo de proyecto react || react-ts
+
+//Crear nuevo proyecto de React con Create React App - CRA 
+npx create-react-app my-app
+cd my-app
+npm start
+
+//Instalar PropTypes (Solo para cuando se está trabajando con JavaScript).
+npm install prop-types
