@@ -12,3 +12,27 @@ npm start
 
 //Instalar PropTypes (Solo para cuando se está trabajando con JavaScript).
 npm install prop-types
+
+/*---- JEST ----*/
+//Instalar jest por medio de npm 
+npm install --save-dev jest
+
+//configurar el siguiente comando en los script del package.json
+"test": "jest",
+"test:watch": "jest --watchAll"
+
+//instalar intellsense para jest
+npm install --save-dev @types/jest
+
+/*---- BABEL ----*/
+//Aquí Babel se utiliza para poder hacer uso de los modulos introducidos en el ECMAScript 6
+
+//instalar babel para jest
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+
+//crear archivo babel.config.cjs para configurar babel y pegar el siguiente código:
+module.exports = {
+  presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+};
+
+//luego de hacer todo esto se debe reiniciar el modo watch del jest (pruebas)
