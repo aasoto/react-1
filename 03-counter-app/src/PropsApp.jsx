@@ -4,8 +4,9 @@ export const PropsApp = ({title, subTitle, developper}) => {
   return (
     <>
       <a href="#">
-        <h1>{title}</h1>
+        <h1 data-testid="test-title">{title}</h1>
       </a>
+      <h4>{subTitle}</h4>
       <h4>{subTitle}</h4>
       <p>Desarrollador por: {developper}</p>
     </>
