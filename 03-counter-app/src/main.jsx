@@ -9,7 +9,7 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <PropsApp title="Probando PropTypes" subTitle='Esto es un subtítulo'/> */}
-    <CounterApp value={4} />
+    <PropsApp title="Probando PropTypes" subTitle='Esto es un subtítulo'/>
+    {/* <CounterApp value={4} /> */}
   </React.StrictMode>
 );

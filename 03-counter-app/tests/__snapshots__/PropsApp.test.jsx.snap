@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas de <PropsApp /> debe hacer match con el snapshoot 1`] = `
+<div>
+  <a
+    href="#"
+  >
+    <h1>
+      Prueba de PropsApp
+    </h1>
+  </a>
+  <h4>
+    No hay subtítulo
+  </h4>
+  <p>
+    Desarrollador por: 
+    Andrés Soto
+  </p>
+</div>
+`;

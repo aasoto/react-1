@@ -17,6 +17,12 @@ npm install prop-types
 //Instalar jest por medio de npm 
 npm install --save-dev jest
 
+//para hacer el testignde componentes de react o para testear el DOM de react se debe instalar React Testing Library
+npm install --save-dev @testing-library/react
+
+//instalar jest-environment-jsdom
+npm install --save-dev jest-environment-jsdom
+
 //configurar el siguiente comando en los script del package.json
 "test": "jest",
 "test:watch": "jest --watchAll"
@@ -24,13 +30,17 @@ npm install --save-dev jest
 //instalar intellsense para jest
 npm install --save-dev @types/jest
 
-//crear archivo jest.config.js y colocar el siguiente código.
+//crear archivo jest.config.cjs y colocar el siguiente código.
 module.exports = {
+  testEnvironment: 'jest-environment-jsdom',
   setupFiles: ['./jest.setup.js']
 }
 
 //instalar esta dependencia para que los fetch funcionen correctamente con jest
 npm install whatwg-fetch --save-dev
+
+//crear archivo test.setup.js para importar el whatwg-fetch
+import 'whatwg-fetch';
 
 /*---- BABEL ----*/
 //Aquí Babel se utiliza para poder hacer uso de los modulos introducidos en el ECMAScript 6
@@ -38,9 +48,21 @@ npm install whatwg-fetch --save-dev
 //instalar babel para jest
 npm install --save-dev babel-jest @babel/core @babel/preset-env
 
+//instalar @babel/preset-react para interpretar los componentes de react
+npm install --save-dev @babel/preset-react
+
 //crear archivo babel.config.cjs para configurar babel y pegar el siguiente código:
 module.exports = {
-  presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+  presets: [
+    ['@babel/preset-env', {
+      targets: {
+        esmodules: true
+      }
+    }],
+    ['@babel/preset-react', {
+      runtime: 'automatic'
+    }]
+  ],
 };
 
 //luego de hacer todo esto se debe reiniciar el modo watch del jest (pruebas)
