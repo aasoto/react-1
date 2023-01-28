@@ -24,6 +24,14 @@ npm install --save-dev jest
 //instalar intellsense para jest
 npm install --save-dev @types/jest
 
+//crear archivo jest.config.js y colocar el siguiente código.
+module.exports = {
+  setupFiles: ['./jest.setup.js']
+}
+
+//instalar esta dependencia para que los fetch funcionen correctamente con jest
+npm install whatwg-fetch --save-dev
+
 /*---- BABEL ----*/
 //Aquí Babel se utiliza para poder hacer uso de los modulos introducidos en el ECMAScript 6
 
@@ -36,3 +44,4 @@ module.exports = {
 };
 
 //luego de hacer todo esto se debe reiniciar el modo watch del jest (pruebas)
+
