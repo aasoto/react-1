@@ -13,6 +13,5 @@ export const getGifs = async(category) => {
     });
   });
 
-  console.log(gifs);
   return gifs;
 }
