@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { useState } from "react"
+import { Message } from "./Message";
 
 export const SimpleForm = () => {
 
@@ -17,6 +19,25 @@ export const SimpleForm = () => {
     });
   }
 
+  /** Cuando la lista de dependencias está vacia el useEffect solo
+   *  se ejecuta una sola vez y es cuando el componente se renderiza.
+   */
+  useEffect(() => {  
+    // console.log('useEffect called!');
+  }, []);
+  
+  /** Aquí se ejecuta el useEffect cuando el estado de un campo del
+   *  formulario cambia.
+   */
+  useEffect(() => {
+    // console.log('formState changed!');
+  }, [formState]);
+  
+  /** Aquí el campo del email ha cambiado por lo tanto se ejecuta el useEffect */
+  useEffect(() => {
+    // console.log('email changed!');
+  }, [email]);
+  
   return (
     <>
       <h1>Formulario Simple</h1>
@@ -33,12 +54,17 @@ export const SimpleForm = () => {
 
       <input 
         type="email"
-        className="form-control"
+        className="form-control mt-2"
         placeholder="andres@example.com"
         name="email"
         value={email}
         onChange={(event) => onInputChange(event)}
       />
+
+      {
+        (username === 'aasotos') && <Message />
+      }
+
     </>
   )
 }
