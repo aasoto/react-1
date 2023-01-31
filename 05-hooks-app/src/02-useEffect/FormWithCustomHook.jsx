@@ -1,4 +1,4 @@
-import { UseForm } from "./hooks/UseForm"
+import { UseForm } from "../hooks/UseForm"
 
 export const FormWithCustomHook = () => {
   
