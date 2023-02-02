@@ -13,6 +13,17 @@ npm start
 //Instalar PropTypes (Solo para cuando se está trabajando con JavaScript).
 npm install prop-types
 
+//Instalar React Router DOM v6
+npm install react-router-dom@6
+
+//Hacer importaciones del React Router DOM en el main.jsx
+import { BrowserRouter } from "react-router-dom";
+//El BowserRouter es un Higher Order Components es decir un componente que recibe otros componentes
+  y debe hacerse renderizarse en la función principal del ReactDOM
+  <BrowserRouter>
+  <BrowserRouter/>
+
+  
 /*---- JEST ----*/
 //Instalar jest por medio de npm 
 npm install --save-dev jest
