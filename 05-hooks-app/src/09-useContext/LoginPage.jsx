@@ -9,11 +9,12 @@ export const LoginPage = () => {
       <h1>LoginPage</h1>
       <hr />
 
-      <pre>
+      <pre aria-label="pre-user">
         {JSON.stringify(user, null, 3)}
       </pre>
 
       <button 
+        aria-label="btn-send-user"
         className="btn btn-success"
         onClick={() => setUser({
           id: 123,
