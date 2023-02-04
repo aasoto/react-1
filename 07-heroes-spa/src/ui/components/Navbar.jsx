@@ -1,7 +1,21 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 
 export const Navbar = () => {
+
+  /** Este es un custom Hook de react-router-dom para facilitar la navegación
+   * entre componentes.
+   * Los Hooks que son hechos por librería de terceros como en esta caso react-router-dom tambien se conocen como custom Hooks.
+   */
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    /** Cuando se cierra la sesión se debe reemplazar la ruta para que no se puedan regresar */
+    navigate('/login', {
+      replace: true
+    });
+  }
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
 
@@ -38,7 +52,10 @@ export const Navbar = () => {
             Andrés
           </span>
 
-          <button className='nav-item nav-link btn'>
+          <button 
+            className='nav-item nav-link btn'
+            onClick={() => onLogout()}
+          >
             Logout
           </button>
         </ul>
