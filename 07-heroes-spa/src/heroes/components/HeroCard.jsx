@@ -19,7 +19,7 @@ export const HeroCard = ({
   const heroImageUrl = `/assets/heroes/${ id }.jpg`;
 
   return (
-    <div className="col">
+    <div className="col animate__animated animate__fadeIn">
       <div className="card">
         <div className="row no-gutters">
 
@@ -35,11 +35,11 @@ export const HeroCard = ({
               {/** Llama a component que evalua si el alter ego
                * y los characters son iguales.
                */}
-               <CharactersByHero characters={characters} alter_ego={ alter_ego } />
+              <CharactersByHero characters={characters} alter_ego={ alter_ego } />
 
-               <p className="card-text">
+              <p className="card-text">
                 <small className="text-muted">{ first_appearance }</small>
-               </p>
+              </p>
 
               <Link to={`/hero/${ id }`}>
                 Más... 

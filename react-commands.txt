@@ -23,6 +23,8 @@ import { BrowserRouter } from "react-router-dom";
   <BrowserRouter>
   <BrowserRouter/>
 
+//para partir la ruta y obtener los query parameters se debe instalar este paquete para facilitar el trabajo.
+npm install query-string
   
 /*---- JEST ----*/
 //Instalar jest por medio de npm 
