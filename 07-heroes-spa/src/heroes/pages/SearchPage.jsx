@@ -15,7 +15,16 @@ export const SearchPage = () => {
   /** Se obtienen los query parameters en un objecto de javascript */
   const { q = '' } = queryString.parse(location.search);
 
+  /** Este es un helper que consulta los heroes según criterio de busqueda recibido en los query parameters */
   const heroes = getHeroesByName(q);
+
+  /** Evalua si el tamaño del criterio de busqueda es igual a cero */
+  const showSearch = (q.length === 0);
+
+  /** Evalúa si el tamaño del criterio de busqueda es mayor a cero
+   * Y si el tamaño del arreglo es mayor a cero, es decir si encontró registros con el criterio dado.
+   */
+  const showError = (q.length > 0) && heroes.length === 0;
   
   /** Custom Hook que contiene funciones basicas de como manejar un formulario
    * - Se le tiene que mandar en un objecto el nombre del atribute name de la etiqueta HTML
@@ -59,11 +68,18 @@ export const SearchPage = () => {
         <div className="col-7">
           <h4>Results</h4>
           <hr />
-
-          <div className="alert alert-primary">
+          
+          {/** En la condición del style se evalua si hay algo en el criterio de busqueda.
+           * En caso de que no haya nada se muestra la alerta, pero si hay algo esta se oculta.
+           */}
+          <div className="alert alert-primary animate__animated animate__fadeIn"
+            style={{ display: showSearch ? '' : 'none' }}>
             Search a hero
           </div>
-          <div className="alert alert-danger">
+
+          {/** La condición del style evalúa si hay algo en el criterio de busqueda y si con este se encontró algo en la lista de heroes */}
+          <div className="alert alert-danger animate__animated animate__fadeIn"
+            style={{ display: showError ? '' : 'none' }}>
             No hero with <b>{q}</b>
           </div>
 
