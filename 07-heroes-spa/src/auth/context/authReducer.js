@@ -1,5 +1,7 @@
 import { types } from "../types/types";
 
+ /** Los reducers solo están destinados a ser funciones puras. 
+  * Estos no llaman recursos externos ni funciones externas */
 export const authReducer = (state = {}, action) => {
 
   switch (action.type) {
@@ -8,7 +10,7 @@ export const authReducer = (state = {}, action) => {
       return {
         ...state,
         logged: true,
-        name: action.payload
+        user: action.payload
       };
     
     case types.logout:

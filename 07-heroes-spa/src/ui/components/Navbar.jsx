@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth';
 
 
 export const Navbar = () => {
@@ -9,7 +11,11 @@ export const Navbar = () => {
    */
   const navigate = useNavigate();
 
+  /** Se obtiene las variables y funciones del contexto de la autentición */
+  const { user, logout } = useContext(AuthContext);
+
   const onLogout = () => {
+    logout();
     /** Cuando se cierra la sesión se debe reemplazar la ruta para que no se puedan regresar */
     navigate('/login', {
       replace: true
@@ -55,7 +61,7 @@ export const Navbar = () => {
         <ul className="navbar-nav ml-auto">
           
           <span className='nav-item nav-link text-primary'>
-            Andrés
+            {user?.name}
           </span>
 
           <button 
