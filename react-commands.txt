@@ -23,8 +23,8 @@ import { BrowserRouter } from "react-router-dom";
   <BrowserRouter>
   <BrowserRouter/>
 
-//para partir la ruta y obtener los query parameters se debe instalar este paquete para facilitar el trabajo.
-npm install query-string
+//para partir la ruta y obtener los query parameters se debe instalar este paquete para facilitar el trabajo. Se debe usar la versión 7.1.1 para que las pruebas del AppRouter puedan pasar, ya que con la versión actual se presentan errores.
+npm install query-string@7.1.1
   
 /*---- JEST ----*/
 //Instalar jest por medio de npm 
