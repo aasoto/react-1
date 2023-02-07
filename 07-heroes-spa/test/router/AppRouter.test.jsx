@@ -12,7 +12,9 @@ describe('Pruebas del <AppRouter/>', () => {
     }
 
     render(
-      /** Como se están utilizando las rutas se tiene que colocar el MemoryRouter en vez del BrowserRouter */
+      /** Como se están utilizando las rutas se tiene que colocar el MemoryRouter en vez del BrowserRouter.
+       * Se ingresa desde la ruta /marvel para que esta redireccione a la de /login por no estar autenticado.
+       */
       <MemoryRouter initialEntries={['/marvel']}>
         {/** Se usa el AuthContext porque se usa este contexto de autenticación para obtener el esquema y el reducer de la autenticación */}
         <AuthContext.Provider value={contextValue}>
@@ -28,11 +30,16 @@ describe('Pruebas del <AppRouter/>', () => {
   test('debe mostrar el componente de Marvel si está autenticado', () => {
 
     const contextValue = {
-      logged: true
+      logged: true,
+      user: {
+        name: 'Andrés Soto',
+        id: '123'
+      }
     }
 
     render(
-      <MemoryRouter initialEntries={['/marvel']}>
+      /** Se ingresa desde la ruta /login para que esta redireccione a la página principal de marvel despues de la autenticación */
+      <MemoryRouter initialEntries={['/login']}>
         <AuthContext.Provider value={contextValue}>
           <AppRouter />
         </AuthContext.Provider>
