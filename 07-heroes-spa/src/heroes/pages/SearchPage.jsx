@@ -73,13 +73,13 @@ export const SearchPage = () => {
            * En caso de que no haya nada se muestra la alerta, pero si hay algo esta se oculta.
            */}
           <div className="alert alert-primary animate__animated animate__fadeIn"
-            style={{ display: showSearch ? '' : 'none' }}>
+            style={{ display: showSearch ? '' : 'none' }} aria-label="div-search">
             Search a hero
           </div>
 
           {/** La condición del style evalúa si hay algo en el criterio de busqueda y si con este se encontró algo en la lista de heroes */}
           <div className="alert alert-danger animate__animated animate__fadeIn"
-            style={{ display: showError ? '' : 'none' }}>
+            style={{ display: showError ? '' : 'none' }} aria-label="div-no-hero">
             No hero with <b>{q}</b>
           </div>
 
