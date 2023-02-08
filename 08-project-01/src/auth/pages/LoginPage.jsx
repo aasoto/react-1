@@ -1,0 +1,69 @@
+import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { useForm } from '../../hooks'
+import { AlertErrorAuth } from '../components';
+import { authentication } from '../helpers';
+
+export const LoginPage = () => {
+
+  const [alertErrorAuth, setAlertErrorAuth] = useState(false);
+  
+  const {email, password, onInputChange} = useForm({
+    email: '',
+    password: ''
+  });
+
+  useEffect(() => {
+    if (alertErrorAuth) {
+      setAlertErrorAuth(() => !alertErrorAuth);
+    }
+  }, [email, password]);
+
+  const onLoginSubmit = (event) => {
+    event.preventDefault();
+    if ((email.trim().length <= 1) || (password.length <= 6)) return;
+
+    if(authentication(email, password)) {
+      console.log('done');
+    } else {
+      setAlertErrorAuth(() => !alertErrorAuth);
+    }
+  }
+
+  return (
+    <>
+      <div className='flex justify-center items-center h-screen'>
+        <div className='w-1/3 h-1/2 bg-white rounded-lg shadow-xl'>
+          <div className='w-full h-16 rounded-t-lg text-center border-b border-gray-400 flex justify-center items-center'>
+            <h1 className='text-rose-700 text-3xl font-bold'>Login</h1>
+          </div>
+          <AlertErrorAuth show={alertErrorAuth}/>
+          <form onSubmit={onLoginSubmit}>
+            <div className='flex flex-col justify-center items-center gap-5 px-8 pt-10 pb-4'>
+              <input 
+                className='w-full h-12 px-5 border rounded-md border-gray-400 placeholder:text-gray-400' 
+                type="email" 
+                placeholder='Email'
+                name="email"
+                value={email}
+                onChange={onInputChange}
+              />
+              <input 
+                className='w-full h-12 px-5 border rounded-md border-gray-400 placeholder:text-gray-400' 
+                type="password" 
+                placeholder='Password'
+                name="password"
+                value={password}
+                onChange={onInputChange}
+              />
+            </div>
+            <div className='flex justify-end items-center gap-3 p-8'>
+              <button className='bg-rose-700 text-white font-bold rounded-md px-10 py-2'>Ok</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </>
+  )
+}

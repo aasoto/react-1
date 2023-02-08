@@ -6,7 +6,7 @@ export const Navbar = () => {
   const { switchShowSidebar } = useContext(SidebarContext);
 
   return (
-    <div className="flex justify-center items-center w-full h-24 p-4">
+    <div className="fixed z-10 flex justify-center items-center w-full h-24 p-4">
       <nav className="w-full h-full bg-white rounded-lg px-10 py-2 shadow-lg">
         <div className="w-full h-full flex justify-between items-center">
           <div className="flex justify-start items-center gap-5">

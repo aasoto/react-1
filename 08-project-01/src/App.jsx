@@ -1,4 +1,4 @@
-import { AuthProvider } from "./auth"
+import { AuthProvider, LoginPage } from "./auth"
 import { Navbar, Sidebar, SidebarProvider } from "./ui"
 
 export const App = () => {
@@ -7,6 +7,7 @@ export const App = () => {
       <SidebarProvider>
         <Navbar />
         <Sidebar />
+        <LoginPage />
       </SidebarProvider>
       {/* <div className="bg-slate-800 w-full h-screen">
         <img src="images/miss-universe-logo.svg" alt="miss-universe-logo" />
