@@ -66,7 +66,7 @@ export const LoginPage = () => {
               />
             </div>
             <div className='flex justify-end items-center gap-3 p-8'>
-              <button className='bg-rose-700 text-white font-bold rounded-md px-10 py-2'>Ok</button>
+              <button className='bg-rose-700 hover:bg-rose-800 text-white font-bold rounded-md px-10 py-2 scale-100 hover:scale-105 transition duration-200'>Ok</button>
             </div>
           </form>
         </div>
