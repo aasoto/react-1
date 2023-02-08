@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useForm } from '../../hooks'
 import { AlertErrorAuth } from '../components';
+import { AuthContext } from '../context';
 import { authentication } from '../helpers';
 
 export const LoginPage = () => {
+
+  const {login} = useContext(AuthContext);
 
   const [alertErrorAuth, setAlertErrorAuth] = useState(false);
   
@@ -24,8 +27,12 @@ export const LoginPage = () => {
     event.preventDefault();
     if ((email.trim().length <= 1) || (password.length <= 6)) return;
 
-    if(authentication(email, password)) {
+    const autenticated = authentication(email, password);
+
+    if(autenticated) {
       console.log('done');
+      login(autenticated.name);
+
     } else {
       setAlertErrorAuth(() => !alertErrorAuth);
     }
