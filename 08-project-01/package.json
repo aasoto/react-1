@@ -10,6 +10,7 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "flag-icons": "^6.6.6",
     "prop-types": "^15.8.1",
     "query-string": "^7.1.1",
