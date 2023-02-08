@@ -192,124 +192,63 @@ export const heroes = [
     Her work focuses on creating an impact for women’s right to work and as Miss Universe Venezuela, her workshop “Press Play on Success” has brought communities together through job creation and imaginative education. Her project Voices Across the Universe, has opened a dialogue with her fellow Miss Universe sisters making it a great success among contestants and fans alike.`,
     'placement': 'first runner up'
   },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
+    'id': 'cl',
+    'name': 'SOFIA DEPASSIER',
+    'country': 'Chile',
+    'age': '24',
+    'instagram': '@sofiadepassier',
+    'meet': `Sofía Depassier was born and raised in Chile, where she lived until the age of ten until she moved with her mother to the United States following her parent’s divorce. She and her family experienced discrimination, bullying, and racism as a result of not knowing the local language and having cultural differences with the local people. As a result, she felt compelled to collaborate with other immigrants seeking a better quality of life. Fueled by this passion, she created the project “Universe Without Frontiers,” the focus of which is to provide the necessary tools for children and young people in need of guidance after moving to a new country.
+
+    Depassier is passionate about different causes related to gender equality and women’s well-being. In an effort to be a leader to young women around the world, she founded and manages the @womenalert social network which aims to improve visibility and education on issues that affect women. Topics include; the right to body autonomy, reducing stereotypes of beauty, mental health, and body dysmorphia.`,
+    'placement': 'miss congeniality'
   },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
+    'id': 'mt',
+    'name': 'MAXINE FORMOSA GRUPPETTA',
+    'country': 'Malta',
+    'age': '22',
+    'instagram': '@maxine_formosagruppetta',
+    'meet': `Maxine Formosa Gruppetta is a 22 year old who hails from the village of St Julians. She is half Maltese from her mother’s side and half British from her father’s side. She currently works at a company that provides packaging for eco friendly and vegan skincare, make-up, and fragrance products.
+
+    From a very young age she developed an interest in the performing arts including acting, drama, ballet, and jazz dancing. At age 13 she moved to the UK to study singing and song writing. Formosa Gruppetta is very active and loves to go to the gym every day as well as plays tennis, padel, golf, and volleyball.
+    
+    After her close friend was diagnosed with cystic fibrosis, she became dedicated to increasing awareness both locally and internationally about the disease and works closely with an NGO to accomplish this.
+    
+    She loves to volunteer at a horse sanctuary for children with autism where she mucks stables, feeds horses, and takes care of their aesthetics.
+    Maxine is determined to make her two biggest supporters proud; her grandmother, whom she lost due to cancer, and her father, whom she lost just three months after her Miss Universe Malta participation.`,
+    'placement': 'miss congeniality'
   },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
+    'id': 'th',
+    'name': 'ANNA SUEANGAM-IAM',
+    'country': 'Thailand',
+    'age': '24',
+    'instagram': '@annasnga_1o',
+    'meet': `Anna Sueangam-iam was born and raised in a slum in Bangkok with her father. In an effort to protect her from an unsafe environment, her family sent her to a temple where she grew up among Buddhist nuns. Here her meals consisted of leftover food from the monks which most people would consider waste. However, it helped her to grow up and survive childhood life. At an early age, poverty differentiated her life at school from other children, especially the cost of tuition. In order to cover her tuition fees, she had to collect merit points, donate blood every semester, collect plastic waste bottles, and clean public restrooms. This experience made her question the accessibility Thai children had to education.
+
+    Having overcome this challenge, Sueangam-iam would like to represent all the children from less privileged backgrounds and amplify their voices. She uses her bigger voice to collaborate with many nonprofit organizations in order to provide children with access to educational systems. She has conducted the “Do it, Earn it” campaign, supports the project No Mixed Waste, participates in a Saturday school project, and works with Smile Train Thailand.`,
+    'placement': 'social impact award'
   },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
+    'id': 'ua',
+    'name': 'VIKTORIIA APANASENKO',
+    'country': 'Ukraine',
+    'age': '29',
+    'instagram': '@crystal.viktoria',
+    'meet': `Viktoriia Apanasenko received her Master’s Degree in Social Work from the Taras Shevchenko National University of Kyiv and she has been researching the topic of domestic violence for six years. During her school years, she overcame bullying which inspired her to start working closely with mental health causes. She is a Peace Ambassador of the UN Global Compact Ukraine and supports their Mental Help project that provides free, professional psychological help for the victims of the war in Ukraine.
+
+    Since the start of the full-scale war in Ukraine, Apanasenko has been working as a volunteer helping to prepare food for the battalions of the Armed Forces of Ukraine and victims of war. Along with her friend, she provided food, medicine, and hygiene products to more than 300 Ukrainian families, and she continues helping internally displaced people.
+    
+    She plans to bring more awareness to the importance of gender equality in the military through the The Female Quotient, an organization that is advancing gender equality in the workplace.`,
+    'placement': 'spirit of carnival award'
   },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },{
-    'id': '',
-    'name': '',
-    'country': '',
-    'age': '',
-    'instagram': '',
-    'meet': '',
-    'placement': ''
-  },
+    'id': 'vn',
+    'name': 'NGUYỄN THỊ NGỌC CHÂU',
+    'country': 'Vietnam',
+    'age': '28',
+    'instagram': '@ngocchau_612',
+    'meet': `Nguyễn Thị Ngọc Châu is recognized because of her honesty, self-discipline, and self-determination. She considers her community her big family, and therefore never stops working to support as many charities and community projects as possible. She is an ambassador with the Children of Vietnam Charitable Fund which supports children with congenital malformation and diseases in Vietnam.
+
+    She has no place for distraction in her life and has a strong focus on achieving success in her career and pageantry. She has challenged herself in many competitions including Vietnam’s Next Top Model, Miss Supranational, a singing show, and now MISS UNIVERSE.
+    
+    Ngọc Châu aspires to become an entrepreneur, producer, and host of her own program. She wishes to use the platform to bring greater, more positive influences on her community and to support underprivileged children and women in Vietnam.`,
+    'placement': 'swimsuit cape vote'
+  }
 ];
