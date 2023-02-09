@@ -7,7 +7,7 @@ export const Navbar = () => {
 
   const {logout} = useContext(AuthContext);
 
-  const { switchShowSidebar } = useContext(SidebarContext);
+  const { switchShowSidebar, logoPath } = useContext(SidebarContext);
 
   return (
     <div className="fixed z-10 flex justify-center items-center w-full h-24 p-4">
@@ -23,7 +23,9 @@ export const Navbar = () => {
               </svg>
             </button>
 
-            <img className="h-5" src="images/miss-universe-logo.svg" alt="miss-universe-logo" />
+            <NavLink className={({isActive}) => `text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 ${ isActive ? 'bg-gray-100' : '' }`} to="/">
+              <img className="h-5" src={`${logoPath}images/miss-universe-logo.svg`} alt="miss-universe-logo" />
+            </NavLink>
 
             <div className="flex justify-start items-center ml-5 gap-3">
               <NavLink className={({isActive}) => `text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 ${ isActive ? 'border border-gray-500 font-medium bg-gray-100' : '' }`} to="/winner">

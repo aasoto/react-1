@@ -1,6 +1,7 @@
+import { CandidateList } from "../components"
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <CandidateList page={'71th edition - Contestants'} placement={'all'}/>
   )
 }

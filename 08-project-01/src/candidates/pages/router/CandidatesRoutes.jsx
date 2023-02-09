@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { Navbar, Sidebar, SidebarProvider } from "../../../ui"
+import { CandidatePage } from "../CandidatePage"
 import { FinalistsPage } from "../FinalistsPage"
 import { HomePage } from "../HomePage"
 import { RunnersUpPage } from "../RunnersUpPage"
@@ -18,6 +19,7 @@ export const CandidatesRoutes = () => {
             <Route path="runnersup" element={<RunnersUpPage/>}/>
             <Route path="finalists" element={<FinalistsPage/>}/>
             <Route path="semifinalists" element={<SemifinalistPage/>}/>
+            <Route path="candidate/:id" element={<CandidatePage/>}/>
           </Routes>
       </SidebarProvider>
     </>
