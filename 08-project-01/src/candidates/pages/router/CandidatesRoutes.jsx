@@ -12,16 +12,14 @@ export const CandidatesRoutes = () => {
       <SidebarProvider>
         <Navbar />
         <Sidebar />
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="winner" element={<WinnerPage/>}/>
+            <Route path="runnersup" element={<RunnersUpPage/>}/>
+            <Route path="finalists" element={<FinalistsPage/>}/>
+            <Route path="semifinalists" element={<SemifinalistPage/>}/>
+          </Routes>
       </SidebarProvider>
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<HomePage/>}/>
-          <Route path="winner" element={<WinnerPage/>}/>
-          <Route path="runnersup" element={<RunnersUpPage/>}/>
-          <Route path="finalists" element={<FinalistsPage/>}/>
-          <Route path="semifinalists" element={<SemifinalistPage/>}/>
-        </Routes>
-      </div>
     </>
   )
 }

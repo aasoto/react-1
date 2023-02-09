@@ -1,4 +1,4 @@
-export const heroes = [
+export const candidates = [
   {
     'id': 'au',
     'name': 'MONIQUE RILEY',
