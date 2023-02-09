@@ -1,6 +1,7 @@
+import { CandidateList } from "../components"
 
 export const WinnerPage = () => {
   return (
-    <div>WinnerPage</div>
+    <CandidateList page={'Miss Universe 2022'} placement={'miss universe'}/>
   )
 }
