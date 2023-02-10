@@ -2,12 +2,14 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../auth";
 import { SidebarContext } from "../context";
+import { OptionsNavbar } from "./OptionsNavbar";
 
 export const Navbar = () => {
 
   const {logout} = useContext(AuthContext);
 
   const { switchShowSidebar, logoPath } = useContext(SidebarContext);
+
 
   return (
     <div className="fixed z-10 flex justify-center items-center w-full h-24 p-4">
@@ -27,23 +29,19 @@ export const Navbar = () => {
               <img className="h-5" src={`${logoPath}images/miss-universe-logo.svg`} alt="miss-universe-logo" />
             </NavLink>
 
-            <div className="flex justify-start items-center ml-5 gap-3">
-              <NavLink className={({isActive}) => `text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 ${ isActive ? 'border border-gray-500 font-medium bg-gray-100' : '' }`} to="/winner">
-                Winner
-              </NavLink>
-
-              <NavLink className={({isActive}) => `text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 ${ isActive ? 'border border-gray-500 font-medium bg-gray-100' : '' }`} to="/runnersup">
-                Runners Up
-              </NavLink>
-
-              <NavLink className={({isActive}) => `text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 ${ isActive ? 'border border-gray-500 font-medium bg-gray-100' : '' }`} to="/finalists">
-                Finalists
-              </NavLink>
-
-              <NavLink className={({isActive}) => `text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 ${ isActive ? 'border border-gray-500 font-medium bg-gray-100' : '' }`} to="/semifinalists">
-                Semifinalists
-              </NavLink>
+            <div className="group relative">
+              <button className="block md:hidden text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 scale-100 hover:scale-105" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+              <div className="absolute md:static hidden group-hover:block md:block">
+                <div className="flex flex-col md:flex-row justify-start items-center ml-5 gap-3 -translate-x-14 md:translate-x-0 translate-y-8 md:translate-y-0 px-8 md:px-0 py-4 md:py-0 bg-white md:bg-transparent rounded-lg md:rounded-none shadow-lg md:shadow-none">
+                  <OptionsNavbar/>
+                </div>
+              </div>
             </div>
+
 
           </div>
 

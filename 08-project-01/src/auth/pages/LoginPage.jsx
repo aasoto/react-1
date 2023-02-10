@@ -30,7 +30,6 @@ export const LoginPage = () => {
     const autenticated = authentication(email, password);
 
     if(autenticated) {
-      console.log('done');
       login(autenticated.name);
 
     } else {
@@ -41,7 +40,7 @@ export const LoginPage = () => {
   return (
     <>
       <div className='flex justify-center items-center h-screen'>
-        <div className='w-1/3 h-1/2 bg-white rounded-lg shadow-xl'>
+        <div className='w-72 md:w-96 h-80 bg-white rounded-lg shadow-xl'>
           <div className='w-full h-16 rounded-t-lg text-center border-b border-gray-400 flex justify-center items-center'>
             <h1 className='text-rose-700 text-3xl font-bold'>Login</h1>
           </div>
