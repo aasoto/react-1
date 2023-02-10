@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom"
 import { Navbar, Sidebar, SidebarProvider } from "../../../ui"
-import { SearchProvider } from "../../context"
 import { CandidatePage } from "../CandidatePage"
 import { FinalistsPage } from "../FinalistsPage"
 import { HomePage } from "../HomePage"

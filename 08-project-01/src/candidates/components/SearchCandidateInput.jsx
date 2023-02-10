@@ -1,22 +1,26 @@
 import { useEffect } from "react";
-import { useContext } from "react"
+import { useState } from "react";
 import { useForm } from "../../hooks";
 import { getCandidateByName } from "../helpers";
 
 export const SearchCandidateInput = () => {
+
+  const [contestants, setContestants] = useState([]);
 
   const {searchingBox, onInputChange} = useForm({
     searchingBox: ''
   });
 
   useEffect(() => {
-    console.log(getCandidateByName(searchingBox));
+    setContestants(() => getCandidateByName(searchingBox));
+    console.log(contestants);
 
   }, [searchingBox]);
   
 
   return (
     <>
+    <div className="flex flex-col gap-5">
       <input 
         type="text" 
         placeholder="Type the name of the contestant"
@@ -25,6 +29,14 @@ export const SearchCandidateInput = () => {
         value={searchingBox}
         onChange={onInputChange}
       />
+      {contestants.map( contestant => {
+        return (
+        <div key={contestant.id} className="p-4 border border-gray-400 rounded-lg flex justify-start items-center gap-5">
+          <span className={`fi fi-${contestant.id} scale-[2] rounded-sm`}></span>
+          <h3 className="text-gray-600">{contestant.name}</h3>
+        </div>);
+      })}
+    </div>
     </>
   )
 }
