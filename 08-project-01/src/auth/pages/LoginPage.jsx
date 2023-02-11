@@ -52,6 +52,7 @@ export const LoginPage = () => {
                 type="email" 
                 placeholder='Email'
                 name="email"
+                aria-label='email'
                 value={email}
                 onChange={onInputChange}
               />
@@ -60,6 +61,7 @@ export const LoginPage = () => {
                 type="password" 
                 placeholder='Password'
                 name="password"
+                aria-label='input-password'
                 value={password}
                 onChange={onInputChange}
               />
