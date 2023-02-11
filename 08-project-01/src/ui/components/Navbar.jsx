@@ -26,7 +26,7 @@ export const Navbar = () => {
             </button>
 
             <NavLink className={({isActive}) => `text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 ${ isActive ? 'bg-gray-100' : '' }`} to="/">
-              <img className="h-5" src={`${logoPath}images/miss-universe-logo.svg`} alt="miss-universe-logo" />
+              <img aria-label="logo-image" className="h-5" src={`${logoPath}images/miss-universe-logo.svg`} alt="miss-universe-logo" />
             </NavLink>
 
             <div className="group relative">
