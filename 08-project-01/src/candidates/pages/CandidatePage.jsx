@@ -34,7 +34,7 @@ export const CandidatePage = () => {
       <hr className="border"/>
       <div className={`mt-5 grid grid-cols-1 ${ showSidebar ? 'md:grid-cols-3' : 'md:grid-cols-4'} gap-5`}>
         <div className="col-span-1">
-          <img src={`../images/candidates/${id}.PNG`} alt="" className="w-full object-cover object-top rounded-lg"/>
+          <img src={`./../images/candidates/${id}.PNG`} alt="" className="w-full object-cover object-top rounded-lg"/>
         </div>
         <div className={`${ showSidebar ? 'col-span-2' : 'col-span-3' }`}>
           <div className="grid grid-cols-3 gap-5">

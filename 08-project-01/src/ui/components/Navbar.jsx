@@ -13,14 +13,14 @@ export const Navbar = () => {
 
   return (
     <div className="fixed z-10 flex justify-center items-center w-full h-24 p-4">
-      <nav className="w-full h-full bg-white rounded-lg px-10 py-2 shadow-lg">
+      <nav className="w-full h-full bg-white rounded-lg px-5 md:px-10 py-2 shadow-lg">
 
         <div className="w-full h-full flex justify-between items-center">
 
           <div className="flex justify-start items-center gap-5">
 
             <button className="text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 scale-100 hover:scale-105" onClick={() => switchShowSidebar()}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 sm:w-6 h-4 sm:h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
               </svg>
             </button>
@@ -31,7 +31,7 @@ export const Navbar = () => {
 
             <div className="group relative">
               <button className="block md:hidden text-gray-400 hover:text-gray-500 font-normal hover:font-medium px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200 scale-100 hover:scale-105" >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 sm:w-6 h-4 sm:h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
               </button>

@@ -9,9 +9,14 @@ export const CandidateCard = ({
   meet,
   placement
 }) => {
+
+  // import profilePicture from `/images/candidates/${id}.PNG`;
+
+  const profilePicture = `/images/candidates/${id}.PNG`;
+
   return (
     <div className="relative col-span-1 h-[450px] rounded-lg shadow-lg bg-white">
-      <img className="absolute w-full h-2/3 object-cover object-top rounded-t-lg" src={`images/candidates/${id}.PNG`} alt={`${id}-image`} />
+      <img className="absolute w-full h-2/3 object-cover object-top rounded-t-lg" src={profilePicture} alt={`${id}-image`} />
       <h2 className="absolute bottom-28 left-4 text-gray-700 text-xl text-left capitalize">{name.toLowerCase()}</h2>
       <div className="absolute bottom-48 right-10">
         <span className={`fi fi-${id} fis scale-[4] rounded-full`}></span>
