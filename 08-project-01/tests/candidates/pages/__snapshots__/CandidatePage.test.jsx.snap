@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas de <CandidatePage/> debe mostrarse correctamente el snapshot 1`] = `
+<div>
+  <div
+    class="pt-24 pr-5 animate__animated pl-80 animate__fadeInLeft"
+  >
+    <h1
+      class="text-gray-600 font-semibold text-3xl md:text-4xl mb-2"
+    >
+      MARÍA FERNANDA ARISTIZÁBAL
+    </h1>
+    <hr
+      class="border"
+    />
+    <div
+      class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-5"
+    >
+      <div
+        class="col-span-1"
+      >
+        <img
+          alt=""
+          class="w-full object-cover object-top rounded-lg"
+          src="./../images/candidates/undefined.PNG"
+        />
+      </div>
+      <div
+        class="col-span-2"
+      >
+        <div
+          class="grid grid-cols-3 gap-5"
+        >
+          <div
+            class="col-span-1"
+          >
+            <span
+              class="fi fi-undefined scale-[6] md:scale-[10] translate-x-[53px] md:translate-x-[100px] translate-y-[40px] md:translate-y-[68px] rounded-sm"
+            />
+          </div>
+          <div
+            class="col-span-2"
+          >
+            <table
+              class="w-full"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    class="text-gray-500 font-medium text-lg"
+                  >
+                    Country:
+                  </td>
+                  <td
+                    class="text-gray-600 font-bold text-2xl"
+                    colspan="2"
+                  >
+                    COLOMBIA
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="text-gray-500 font-medium text-lg"
+                  >
+                    Age:
+                  </td>
+                  <td
+                    class="text-gray-600 font-bold text-2xl"
+                    colspan="2"
+                  >
+                    25
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="text-gray-500 font-medium text-lg"
+                  >
+                    Instagram:
+                  </td>
+                  <td
+                    class="text-gray-600 text-xl"
+                    colspan="2"
+                  >
+                    <a
+                      href="https://instagram.com/mafearistizabalu"
+                    >
+                      @mafearistizabalu
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <h3
+          class="mt-20 text-gray-600 font-bold text-2xl"
+        >
+          MEET
+        </h3>
+        <p
+          class="text-gray-600 text-lg"
+        >
+          María Fernanda Aristizabál is a motivational speaker, model, and influencer with a degree in media and journalism. Through her campaign #MakeEveryMomentWorthIt, she shares her philosophy of life via supporting vulnerable communities in Colombia. She is especially passionate about generating a positive impact in children’s mental health. Aristizabal works with various nonprofit organizations, including Smile Train and Best Buddies. Aristizabal wishes to use her Miss Universe platform to give visibility and awareness to water scarcity through her campaign #SOSWATER.
+        </p>
+        <button
+          aria-label="btn-back"
+          class="m-5 px-5 py-2 bg-rose-700 hover:bg-rose-800 text-white font-medium hover:font-semibold scale-100 hover:scale-105 shadow-none hover:shadow transition duration-200"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
