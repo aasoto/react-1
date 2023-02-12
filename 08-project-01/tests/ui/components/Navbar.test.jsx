@@ -53,5 +53,25 @@ describe('Pruebas del <Navbar />', () => {
     expect(logoutMock).toHaveBeenCalled();
 
   });
-  
+
+  test('debe llamar <Sidebar />', () => {
+
+    render(
+      <MemoryRouter>
+        <AuthContext.Provider value={{logout: logoutMock}}>
+          <SidebarContext.Provider value={{ 
+              switchShowSidebar: switchShowSidebarMock, 
+              logoPath: logoPathMock 
+            }}>
+            <Navbar/>
+          </SidebarContext.Provider>
+        </AuthContext.Provider>
+      </MemoryRouter>
+    );
+    
+    const btnSearch = screen.getByLabelText('btn-search');
+    fireEvent.click(btnSearch);
+    expect(switchShowSidebarMock).toHaveBeenCalled();
+  });
+
 });
