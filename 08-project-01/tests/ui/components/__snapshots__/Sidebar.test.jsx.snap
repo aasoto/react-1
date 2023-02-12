@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas de <Sidebar /> debe hacer match con el snapshot 1`] = `
+<div>
+  <aside
+    class="fixed z-10 top-24 left-5 h-5/6 w-72 p-3 shadow-xl bg-white rounded-lg animate__animated block animate__fadeInLeft"
+  >
+    <div
+      class="flex flex-col gap-5"
+    >
+      <input
+        class="w-full h-12 px-5 border rounded-md border-gray-400 placeholder:text-gray-400"
+        name="searchingBox"
+        placeholder="Type the name of the contestant"
+        type="text"
+        value=""
+      />
+    </div>
+  </aside>
+</div>
+`;
