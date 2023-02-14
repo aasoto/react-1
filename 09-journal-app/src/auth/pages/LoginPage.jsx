@@ -20,9 +20,9 @@ export const LoginPage = () => {
 
             <Grid item xs={ 12 } sx={{ mt: 2 }}>
               <TextField 
-                label="Contreseña"
+                label="Contraseña"
                 type="password"
-                placeholder='Contreseña'
+                placeholder='Contraseña'
                 fullWidth
               />
             </Grid>
