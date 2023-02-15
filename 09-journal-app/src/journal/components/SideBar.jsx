@@ -1,5 +1,5 @@
-import { Box, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
-import {TurnedInNot} from '@mui/icons-material';
+import { Box, Divider, Drawer, Grid, Icon, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
+// import {TurnedInNot} from '@mui/icons-material';
 
 export const SideBar = ({ drawerWidth }) => {
   return (
@@ -28,7 +28,8 @@ export const SideBar = ({ drawerWidth }) => {
               <ListItem key={ text } disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
-                    <TurnedInNot />
+                    {/* <TurnedInNot /> */}
+                    <Icon>turned_in_not</Icon>
                   </ListItemIcon>
                   <Grid container>
                     <ListItemText primary={text}/>

@@ -1,5 +1,5 @@
-import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
-import { LogoutOutlined, MenuOutlined } from '@mui/icons-material';
+import { AppBar, Grid, Icon, IconButton, Toolbar, Typography } from '@mui/material';
+// import { LogoutOutlined, MenuOutlined } from '@mui/icons-material';
 
 export const NavBar = ({ drawerWidth = 240 }) => {
   return (
@@ -16,14 +16,16 @@ export const NavBar = ({ drawerWidth = 240 }) => {
           edge='start'
           sx={{ mr: 2, display: { sm: 'none' } }}
         >
-          <MenuOutlined/>
+          {/* <MenuOutlined/> */}
+          <Icon>menu_outlined</Icon>
         </IconButton>
 
         <Grid container direction={'row'} justifyContent={'space-between'} alignItems='center'>
           <Typography variant='h6' noWrap component={'div'}>JournalApp</Typography>
         
           <IconButton color='error'>
-            <LogoutOutlined />
+            {/* <LogoutOutlined /> */}
+            <Icon>logout_outlined</Icon>
           </IconButton>
         </Grid>
       </Toolbar>

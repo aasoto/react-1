@@ -1,6 +1,6 @@
 import {Link as RouterLink} from 'react-router-dom'
-import {Button, Grid, Link, TextField, Typography} from '@mui/material'
-import {Google} from '@mui/icons-material'
+import {Button, Grid, Icon, Link, TextField, Typography} from '@mui/material'
+// import {Google} from '@mui/icons-material'
 import { AuthLayout } from '../layout/AuthLayout'
 
 export const LoginPage = () => {
@@ -37,7 +37,8 @@ export const LoginPage = () => {
               
               <Grid item xs={ 12 } sm={ 6 }>
                 <Button variant="contained" fullWidth>
-                  <Google/>
+                  {/* <Google/> */}
+                  <Icon>google</Icon>
                   <Typography sx={{ ml: 1 }}>Google</Typography>
                 </Button>
               </Grid>
