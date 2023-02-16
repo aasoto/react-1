@@ -92,3 +92,7 @@ npm install @mui/material @emotion/react @emotion/styled
 
 //instalar los iconos de Material UI
 npm install @mui/icons-material
+
+/*----- REDUX -----*/
+//instalar redux toolkit
+npm install @reduxjs/toolkit react-redux
