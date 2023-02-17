@@ -94,5 +94,21 @@ npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 
 /*----- REDUX -----*/
-//instalar redux toolkit
+//instalar redux toolkit https://redux-toolkit.js.org/introduction/getting-started
 npm install @reduxjs/toolkit react-redux
+
+//en la carpeta src/store crear un archivo llamado store.js y pegar el siguiente código
+
+import { configureStore } from '@reduxjs/toolkit'
+
+export const store = configureStore({
+  reducer: {},
+})
+
+//colocar el provider en el nivel más alto de la aplicación para que se pueda tener acceso al store desde cualquier parte de la misma.
+
+<Provider store={store}>
+  <BrowserRouter>
+    <App />
+  <BrowserRouter>
+</Provider>,
