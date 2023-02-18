@@ -25,13 +25,11 @@ export const LoginPage = () => {
     event.preventDefault();
     dispatch(checkingAuthentication());
     
-    console.log({email, password});
   }
 
   const onGoogleSignIn = () => {
     dispatch(startGoogleSighIn());
     
-    console.log('onGoogleSignIn');
   }
 
   return (
