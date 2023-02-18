@@ -1,0 +1,131 @@
+/**----- PASOS PARA CONFIGURAR INICIO SESIÓN CON GOOGLE -----**/
+
+//Configuración inicial con Firebase con la versión modular
+-> click en "Go to console"
+-> click en "Agregar proyecto"
+-> ingresar nombre "react-curso"
+-> confirmar que se va a usar Firebase solo por fines del trabajo
+-> click con continuar.
+-> opcional configurar google analitics
+--- CREA LA BASE DE DATOS NO RELACIONAL ---
+
+-> Lleva la página principal de la base de datos de proyecto.
+-> dar click en el icono </> "Agrega Firebase atu app web".
+-> colocarle un nombre a esta conexión web por ejemplo "Journal-App"
+-> el hosting se puede configurar despues ya que tiene costo.
+-> click en "Registrar aplicación"
+---- SE REGISTRA LA APLICACIÓN ----
+
+-> ingresar Firebase en el proyecto que se está desarrollando
+  npm install firebase
+-> ofrece la configuración del proyecto
+-> copiar la configuración del proyecto
+-> ** en caso de perder la configuración del proyecto se debe ir a la raíz de este y en la parte donde dice 1 app que se encuentra al lado de +Agregar app, dar click donde dice 1 app, luego donde sale el nombre de nuestra app Journal-App se debe dar click en el engrane de configuración y allí ya mostra la configuración del proyecto
+
+-> configuración original del proyecto
+
+/******************************************************************/
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAdPTa8_b7mMn9JK4uC860pFBa9xttjAj0",
+  authDomain: "react-curso-64867.firebaseapp.com",
+  projectId: "react-curso-64867",
+  storageBucket: "react-curso-64867.appspot.com",
+  messagingSenderId: "310369209308",
+  appId: "1:310369209308:web:f81ae678d8623eff3ddd19"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+/******************************************************************/
+
+
+-> crear un archivo en la ubicación src/firebase llamado config.js
+** así debería quedar la configuración de la base de datos **
+
+/******************************************************************/
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore/lite';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAdPTa8_b7mMn9JK4uC860pFBa9xttjAj0",
+  authDomain: "react-curso-64867.firebaseapp.com",
+  projectId: "react-curso-64867",
+  storageBucket: "react-curso-64867.appspot.com",
+  messagingSenderId: "310369209308",
+  appId: "1:310369209308:web:f81ae678d8623eff3ddd19"
+};
+
+// Initialize Firebase
+export const FirebaseApp = initializeApp(firebaseConfig); //aplicación y el testing
+export const FirebaseAuth = getAuth(FirebaseApp); //aquí vienen todas las funcionalidades de autenticación
+export const FirebaseDB = getFirestore(FirebaseApp); //configuración de la base de datos.
+/******************************************************************/
+
+-> Para configurar la autenticación se debe ir a la opción de autenticación, luego dar click en la pestaña de sign-in method y seleccionar correo electronico/contraseña, luego habilitar.
+-> Para agregar google dar click en el botón de "nuevo proveedor" y seleccionar google, se debe escribir un correo de asistencia.
+
+-> crear archivo en src/firebase que se llame providers.js
+
+/******************************************************************/
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { FirebaseAuth } from './config';
+
+const googleProvider = new GoogleAuthProvider();
+
+/** función para autenticarse con google */
+export const signInWithGoogle = async() => {
+
+  try {
+    
+    const result = await signInWithPopup(FirebaseAuth /** autenticación */, googleProvider /** proveedor para el popup (ventana emergente) */);
+    // const credentials = GoogleAuthProvider.credentialFromResult(result);
+    /** desestructurar los campos principales del resultado */
+    const { displayName, email, photoURL, uid } = result.user;
+
+    return {
+      ok: true,
+      //user info
+      displayName, email, photoURL, uid
+    }
+
+  } catch (error) {
+    
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    return {
+      ok: false,
+      errorMessage,
+    }
+
+  }
+}
+/******************************************************************/
+
+-> crear archivo en src/firebase llamado thunks.js para configurar función asincrona de iniciar sesión
+
+/******************************************************************/
+export const startGoogleSighIn = () => {
+  return async(dispatch) => {
+
+    dispatch(checkingCredentials());
+    
+    const result = await signInWithGoogle();
+    if ( !result.ok ) return dispatch( logout(result.errorMessage) );
+
+    dispatch( login(result) );
+  }
+}
+/******************************************************************/
+-> la definición de la funciones login() y logout() se encuentran en el authSlice.js

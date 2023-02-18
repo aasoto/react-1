@@ -9,7 +9,9 @@ import { useMemo } from 'react'
 
 export const LoginPage = () => {
 
+  /** se obtiene el estado de la autenticación */
   const {status} = useSelector(state => state.auth);
+  /** memorizado, contiene el resultado de status */
   const isAuthenticating = useMemo(() => status === 'checking', [status]);
 
   const dispatch = useDispatch();
