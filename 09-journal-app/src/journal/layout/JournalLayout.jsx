@@ -12,6 +12,7 @@ export const JournalLayout = ({children}) => {
       <SideBar drawerWidth={drawerWidth}/>
 
       <Box
+        className='animate__animated animate__fadeIn animate__faster'
         component={'main'}
         sx={{ flexGrow: 1, p: 3 }}
       >
