@@ -95,7 +95,7 @@ export const RegisterPage = () => {
                 xs={ 12 }
                 display={ !!errorMessage ? '' : 'none' }
               >
-                <Alert severity='error'>{ JSON.stringify(errorMessage) }</Alert>
+                <Alert severity='error'>{ errorMessage }</Alert>
               </Grid>
 
               <Grid item xs={ 12 }>
