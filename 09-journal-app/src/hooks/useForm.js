@@ -49,6 +49,7 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
     formState,
     onInputChange,
     onResetForm,
+    isFormValid,
     ...formValidation,
   }
 }
