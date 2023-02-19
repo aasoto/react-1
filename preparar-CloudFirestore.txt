@@ -1,0 +1,24 @@
+/***----- PREPARAR LA BASE DE DATOS - CLOUDFIRESTORE -----***/
+
+-> Entrar la Firestore y seleccionar la base de datos que se está trabajando
+-> Seleccionar Firestore Database
+-> click en "crear base de datos"
+-> seleccionar "iniciar en modo de producción"
+-> click en siguiente
+-> seleccionar la base de datos más cercana a la región donde se encuentra uno a los usuarios de la aplicación.
+-> click en habilitar
+----- EMPIEZA A CREAR EL ESPACIO DE LA BASE DE DATOS -----
+
+-> configurar las reglas de firestore para que pueda guardar
+-> cambiar el "false" por el "request.auth != null", debe quedar así
+
+/*******************************************************************/
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+/*******************************************************************/
