@@ -1,0 +1,19 @@
+/***----- SUBIR IMAGENES CON CLOUDINARY.COM -----***/
+
+-> Ir a cloudinary.com
+-> click en login
+-> seleccionar el dashboard
+-> seleccionar Media Library (aquí se almacenan las carpetas) y preparar el espacio donde se vana a almacenar las imagenes.
+-> para hacer una carga seleccionar el engrane del navbar para ver la configuración.
+-> click en la pastaña de "Upload"
+-> buscar la sección de "Upload presents:"
+-> hacer click en "Add Upload Preset"
+-> ponerle nombre al Upload Preset
+-> seleccionar nodo de autenticación "Signing Mode" puede ser signed o unsigned
+-> escribir el nombre del Folder (si se deja vacio las iamgenes quedan regadas en la raíz y se ve feo).
+-> cliquear el botón de Save para guardar la configuración.
+---- SE CREA LA CONFIGURACIÓN ----
+-> verificar la configuración en el Upload presets
+
+/*-- POSTMAN --*/
+-> para ver docuemntación de cloudinary (?) Help/Documentation y buscar "upload api reference"
