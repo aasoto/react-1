@@ -4,8 +4,14 @@ import {Alert, Button, Grid, Icon, Link, TextField, Typography} from '@mui/mater
 import { AuthLayout } from '../layout/AuthLayout'
 import { useForm } from '../../hooks'
 import { useDispatch, useSelector } from 'react-redux'
-import { checkingAuthentication, startGoogleSighIn, startLoginWithEmailPassword } from '../../store/auth'
+import { startGoogleSighIn, startLoginWithEmailPassword } from '../../store/auth'
 import { useMemo } from 'react'
+
+
+const formData = {
+  email: '',
+  password: ''
+}
 
 export const LoginPage = () => {
 
@@ -16,10 +22,7 @@ export const LoginPage = () => {
 
   const dispatch = useDispatch();
 
-  const {email, password, onInputChange} = useForm({
-    email: 'andres@gmail.com',
-    password: '12345678'
-  });
+  const {email, password, onInputChange} = useForm(formData);
 
   const onSubmit = ( event ) => {
     event.preventDefault();
