@@ -1,5 +1,5 @@
 
-export const IconBlack = ({size = 'sm', children}) => {
+export const White = ({size = 'sm', children}) => {
   if (size === 'sm') {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`w-6 h-6 text-black`}>

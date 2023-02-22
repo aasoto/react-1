@@ -1,2 +1,2 @@
-export * from './IconBlack';
-export * from './svg';
+export * from './Icon';
+export * from './code';

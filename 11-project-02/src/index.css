@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .navbar {
-  @apply fixed z-10 flex justify-center items-center w-full h-24 p-4
+  @apply fixed z-20 flex justify-center items-center w-full h-24 p-4
 }
 
 .navbar nav{
-  @apply w-full h-full bg-white rounded-lg px-5 md:px-10 py-2 shadow-lg
+  @apply w-full h-full backdrop-blur-md bg-white/50 rounded-lg px-5 md:px-10 py-2 shadow-lg
 }
 
 .navbar .nav-container{

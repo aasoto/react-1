@@ -1,5 +1,6 @@
 import {Routes as RoutesList, Route, Navigate} from 'react-router-dom'
-import { LoginPage } from '../auth'
+import App from '../App'
+import { CreateAccountPage, LoginPage } from '../auth'
 import { Navbar } from '../ui'
 
 
@@ -9,6 +10,8 @@ export const Routes = () => {
       <Navbar/>
       <RoutesList>
         <Route path='/auth/login' element={<LoginPage/>}/>
+        <Route path='/auth/create-account' element={<CreateAccountPage/>}/>
+        <Route path='/*' element={<App/>}/>
       </RoutesList>
     </>
   )
