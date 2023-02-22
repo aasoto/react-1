@@ -9,3 +9,15 @@
 .navbar nav{
   @apply w-full h-full bg-white rounded-lg px-5 md:px-10 py-2 shadow-lg
 }
+
+.navbar .nav-container{
+  @apply flex justify-between items-center
+}
+
+.navbar .nav-section{
+  @apply flex items-center gap-5
+}
+
+.navbar h1{
+  @apply text-black font-bold text-2xl italic
+}

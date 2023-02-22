@@ -1,3 +1,2 @@
-export * from './ShoppingBag';
-export * from './ShoppingCart';
-export * from './UserCircle';
+export * from './IconBlack';
+export * from './svg';

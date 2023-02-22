@@ -1,17 +1,23 @@
-import { ShoppingBag, ShoppingCart, UserCircle } from "../icons"
+import { IconBlack, ShoppingBag, ShoppingCart, UserCircle } from "../icons"
 
 export const Navbar = () => {
   return (
     <div className="navbar">
       <nav>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-5">
-            <ShoppingBag size="md"/>
-            <span className="text-black font-bold text-2xl italic">Shopping Store</span>
+        <div className="nav-container">
+          <div className="nav-section">
+            <IconBlack size="md">
+              <ShoppingBag/>
+            </IconBlack>
+            <h1>Shopping Store</h1>
           </div>
-          <div className="flex items-center gap-5">
-            <ShoppingCart size="md" />
-            <UserCircle size="md"/>
+          <div className="nav-section">
+            <IconBlack size="md">
+              <ShoppingCart/>
+            </IconBlack>
+            <IconBlack size="md">
+              <UserCircle/>
+            </IconBlack>
           </div>
         </div>
       </nav>
