@@ -1,4 +1,5 @@
 import { IconBlack, ShoppingBag, ShoppingCart, UserCircle } from "../icons"
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   return (
@@ -12,12 +13,16 @@ export const Navbar = () => {
             <h1>Shopping Store</h1>
           </div>
           <div className="nav-section">
+
             <IconBlack size="md">
               <ShoppingCart/>
             </IconBlack>
-            <IconBlack size="md">
-              <UserCircle/>
-            </IconBlack>
+
+            <Link to={'/auth/login'}>
+              <IconBlack size="md">
+                <UserCircle/>
+              </IconBlack>
+            </Link>
           </div>
         </div>
       </nav>

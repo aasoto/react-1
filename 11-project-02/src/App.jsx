@@ -1,9 +1,9 @@
+import { Routes } from "./router/routes"
 
-import { Navbar } from './ui'
 
 function App() {
   return (
-    <Navbar/>
+    <Routes/>
   )
 }
 
