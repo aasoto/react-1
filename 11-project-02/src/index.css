@@ -2,22 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Navbar */
 .navbar {
   @apply fixed z-20 flex justify-center items-center w-full h-24 p-4
 }
-
 .navbar nav{
   @apply w-full h-full backdrop-blur-md bg-white/50 rounded-lg px-5 md:px-10 py-2 shadow-lg
 }
-
 .navbar .nav-container{
   @apply flex justify-between items-center
 }
-
 .navbar .nav-section{
   @apply flex items-center gap-5
 }
-
 .navbar h1{
   @apply text-black font-bold text-2xl italic
+}
+
+/* AuthMenu */
+.auth-menu {
+  @apply w-56 px-5 py-3 backdrop-blur-md bg-white/50 rounded-md shadow-lg
+}
+.auth-menu .contains {
+  @apply flex flex-col gap-3
+}
+.auth-menu button{
+  @apply flex items-center gap-3 w-full px-4 py-3 rounded-md hover:bg-black hover:text-white transition duration-200
+}
+.auth-menu svg{
+  @apply text-black w-6 h-6 transition duration-200
 }

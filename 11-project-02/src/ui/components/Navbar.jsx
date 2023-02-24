@@ -13,12 +13,10 @@ export const Navbar = () => {
         <nav>
           <div className="nav-container">
             <div className="nav-section">
-              <Link className="nav-section" to={'/'}>
-                <Icon color="black" size="md">
-                  <ShoppingBag/>
-                </Icon>
-                <h1>Shopping Store</h1>
-              </Link>            
+              <Icon color="black" size="md">
+                <ShoppingBag/>
+              </Icon>
+              <h1>Shopping Store</h1>
             </div>
             <div className="nav-section">
 
