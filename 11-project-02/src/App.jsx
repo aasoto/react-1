@@ -1,9 +1,9 @@
-import { Routes } from "./router/routes"
+import { Routes as AppRouter } from "./router/routes"
 
 
 function App() {
   return (
-    <Routes/>
+    <AppRouter/>
   )
 }
 

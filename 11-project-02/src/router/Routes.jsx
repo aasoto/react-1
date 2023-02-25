@@ -11,7 +11,7 @@ export const Routes = () => {
       <RoutesList>
         <Route path='/auth/login' element={<LoginPage/>}/>
         <Route path='/auth/create-account' element={<CreateAccountPage/>}/>
-        <Route path='/*' element={<App/>}/>
+        <Route path='/*' element={<Navigate to='/auth/login'/>}/>
       </RoutesList>
     </>
   )
